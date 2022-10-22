@@ -1,0 +1,135 @@
+/*GENERAL*/
+
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+    --text: rgb(230, 230, 230);
+    --emp-text: rgb(130, 150, 180);
+    --background: rgb(30, 30, 30);
+}
+
+.emp {
+    color: var(--emp-text);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    color: var(--text);
+    user-select: none;
+}
+
+html {
+    background-color: var(--background);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    min-width: 280px;
+    height: 90vh;
+    background-color: var(--background);
+}
+
+/*HEADER*/
+
+header {
+    height: 10vh;
+}
+
+/*LOGO*/
+
+.logo {
+    font-family: "Special Elite", cursive;
+    font-size: 3rem;
+    padding: 1rem;
+    height: 4.2rem;
+}
+
+.logo::first-letter {
+    color: var(--emp-text);
+}
+
+/*MENU*/
+
+.navigation-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu-ul a {
+    text-decoration: none;
+    padding: 0.75rem;
+    display: block;
+    font-weight: bold;
+}
+
+.menu-ul a:hover {
+    color: var(--emp-text);
+}
+
+/*PROFILE*/
+
+.profile-texts > * {
+    margin: 1rem;
+}
+
+.profile-texts {
+    max-width: 50vw;
+    min-width: 280px;
+}
+
+.profile-texts h1 {
+    word-spacing: 0.5rem;
+}
+
+.profile-texts a {
+    text-decoration: none;
+    border: 3px solid var(--emp-text);
+    border-radius: 0 0.5rem 0 0.5rem;
+    color: var(--emp-text);
+    padding: 0.5rem;
+    display: block;
+    text-align: center;
+    width: 10rem;
+    font-weight: bold;
+}
+
+.profile-texts a:hover {
+    color: var(--background);
+    background-color: var(--emp-text);
+}
+
+img {
+    width: 12rem;
+    /* margin: 1rem; */
+    border-radius: 0 1rem 0 1rem;
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        /* display: block; */
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .profile-texts {
+        max-width: 95vw;
+    }
+
+    .profile-texts a {
+        margin: 2rem auto 2rem auto;
+    }
+}
